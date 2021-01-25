@@ -1,0 +1,25 @@
+{
+  "name": "blogger-api",
+  "version": "1.0.0",
+  "description": "\"backend system to mwandishi blogging web app\"",
+  "main": "server.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "nyc mocha --recursive",
+    "start": "nodemon server.js"
+  },
+  "author": "NICO",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mocha": "^8.2.1",
+    "mongoose": "^5.11.13",
+    "nodemon": "^2.0.7",
+    "nyc": "^15.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.18.0"
+  }
+}
