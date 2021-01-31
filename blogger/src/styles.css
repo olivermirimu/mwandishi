@@ -1,1 +1,171 @@
-/* You can add global styles to this file, and also import other style files */
+.card {
+  position: relative;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
+  box-sizing: border-box;
+}
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  box-sizing: border-box;
+}
+
+.container-fluid {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  box-sizing: border-box;
+}
+
+/* form styles */
+label {
+  display: inline-block;
+  margin-bottom: 0.3rem;
+}
+
+.form-row {
+  display: -webkit-box;
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -5px;
+  margin-left: -5px;
+}
+
+.form-group {
+  margin-top: 1rem;
+}
+
+.form-row > [class*="col-"] {
+  padding: 0 5px;
+}
+
+.form-control {
+  display: block;
+  width: 90%;
+  /* width: 100%; */
+  /* height: calc(1.5em + .75rem + 2px); */
+  padding: 0.3rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  -webkit-transition: border-color 0.15s ease-in-out,
+    box-shadow 0.15s ease-in-out;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.btn {
+  display: inline-block;
+  font-weight: 400;
+  color: #212529;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  border: 1px solid transparent;
+  padding: 0.375rem 0.75rem;
+  margin: 0 5px;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+  -webkit-transition: color 0.15s ease-in-out,
+    background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
+    box-shadow 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.col-sm-auto {
+  position: relative;
+  margin-bottom: 5px;
+}
+.bg-primary {
+  background-color: #354b92;
+  color: #ffffff;
+}
+.bg-error {
+ background-color: #dc35467b; 
+  color: #dc3545;
+  border-color: #dc3545;
+}
+
+/* ******* END OF GENERAL STYLES ******** */
+.auth-button {
+  display: block;
+  border: solid #212529 0.8px;
+  margin: 0.5rem auto;
+  min-width: 15rem;
+
+  /* text-align: left; */
+}
+.auth-button > span > svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: 0.5rem;
+  vertical-align: middle;
+  margin-top: -0.2rem;
+}
+
+.auth-container {
+  margin: 0.5rem auto;
+  max-width: 25rem;
+  background-color: #ced4da6b;
+  padding: 0.5rem 0.3rem;
+  border-radius: 15px;
+}
+.auth-container > .section-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+.auth-container > .section-header > h1 {
+  margin-bottom: 0.25rem;
+}
+.auth-container > .section-header > p {
+  margin-top: 0.4rem;
+}
+.inner-auth-container {
+  padding: 0;
+}
+
+.auth-container .email-auth-dialogue {
+  margin: 1rem 0.8rem;
+  padding: 0.5rem 0;
+}
+
+.auth-footer > p {
+  text-align: center;
+  margin-top: 2rem;
+  /* max-width: 18rem; */
+  color: #495057;
+}
+.auth-footer b {
+  color: #000000;
+  cursor: pointer;
+}
+.auth-footer b:focus {
+  border: none;
+}
+
+.auth-container .form-buttons {
+  text-align: center;
+}

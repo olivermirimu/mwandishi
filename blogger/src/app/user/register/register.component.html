@@ -1,0 +1,302 @@
+<section class="container auth-container">
+  <div class="section-header">
+    <h1>Welcome To Mwandishi!</h1>
+    <p>Sign Up to continue</p>
+  </div>
+  <div class="container inner-auth-container">
+    <form
+      #registerForm="ngForm"
+      (ngSubmit)="onSubmit(registerForm)"
+      class="container-fluid"
+    >
+      <div class="error-box" *ngIf="authError">
+        <p class="bg-danger">{{ authError.message }}</p>
+      </div>
+      <div *ngIf="!authInitiated" class="form-group auth-buttons">
+        <button (click)="setAuthMethod('google')" class="btn auth-button">
+          <span>
+            <svg
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+            >
+              <defs>
+                <clipPath id="clip-path">
+                  <path
+                    id="a"
+                    d="M17.791,7.364H9.209v3.477h4.94c-.46,2.209-2.386,3.477-4.94,3.477A5.37,5.37,0,0,1,3.767,9,5.442,5.442,0,0,1,12.6,4.868L15.279,2.25A9.29,9.29,0,0,0,9.209,0,9.08,9.08,0,0,0,0,9a9.08,9.08,0,0,0,9.209,9A8.586,8.586,0,0,0,18,9,7.306,7.306,0,0,0,17.791,7.364Z"
+                    fill="none"
+                  />
+                </clipPath>
+              </defs>
+              <rect id="view-box" width="24" height="24" fill="none" />
+              <g id="Logo" transform="translate(3 3)">
+                <g id="Clipped">
+                  <path
+                    id="a-5"
+                    data-name="a"
+                    d="M17.791,7.364H9.209v3.477h4.94c-.46,2.209-2.386,3.477-4.94,3.477A5.37,5.37,0,0,1,3.767,9,5.442,5.442,0,0,1,12.6,4.868L15.279,2.25A9.29,9.29,0,0,0,9.209,0,9.08,9.08,0,0,0,0,9a9.08,9.08,0,0,0,9.209,9A8.586,8.586,0,0,0,18,9,7.306,7.306,0,0,0,17.791,7.364Z"
+                    fill="none"
+                  />
+                  <g
+                    id="Clipped-2"
+                    data-name="Clipped"
+                    clip-path="url(#clip-path)"
+                  >
+                    <path
+                      id="Path"
+                      d="M0,10.636V0L7.116,5.318Z"
+                      transform="translate(-0.837 3.682)"
+                      fill="#fbbc05"
+                    />
+                  </g>
+                </g>
+                <g id="Clipped-3" data-name="Clipped">
+                  <path
+                    id="a-6"
+                    data-name="a"
+                    d="M17.791,7.364H9.209v3.477h4.94c-.46,2.209-2.386,3.477-4.94,3.477A5.37,5.37,0,0,1,3.767,9,5.442,5.442,0,0,1,12.6,4.868L15.279,2.25A9.29,9.29,0,0,0,9.209,0,9.08,9.08,0,0,0,0,9a9.08,9.08,0,0,0,9.209,9A8.586,8.586,0,0,0,18,9,7.306,7.306,0,0,0,17.791,7.364Z"
+                    fill="none"
+                  />
+                  <g
+                    id="Clipped-4"
+                    data-name="Clipped"
+                    clip-path="url(#clip-path)"
+                  >
+                    <path
+                      id="Path-2"
+                      data-name="Path"
+                      d="M0,4.5,7.116,9.818l2.93-2.5,10.047-1.6V0H0Z"
+                      transform="translate(-0.837 -0.818)"
+                      fill="#ea4335"
+                    />
+                  </g>
+                </g>
+                <g id="Clipped-5" data-name="Clipped">
+                  <path
+                    id="a-7"
+                    data-name="a"
+                    d="M17.791,7.364H9.209v3.477h4.94c-.46,2.209-2.386,3.477-4.94,3.477A5.37,5.37,0,0,1,3.767,9,5.442,5.442,0,0,1,12.6,4.868L15.279,2.25A9.29,9.29,0,0,0,9.209,0,9.08,9.08,0,0,0,0,9a9.08,9.08,0,0,0,9.209,9A8.586,8.586,0,0,0,18,9,7.306,7.306,0,0,0,17.791,7.364Z"
+                    fill="none"
+                  />
+                  <g clip-path="url(#clip-path)">
+                    <path
+                      d="M0,15.136,12.558,5.727l3.307.409L20.093,0V19.636H0Z"
+                      transform="translate(-0.837 -0.818)"
+                      fill="#34a853"
+                    />
+                  </g>
+                </g>
+                <g>
+                  <path
+                    d="M17.791,7.364H9.209v3.477h4.94c-.46,2.209-2.386,3.477-4.94,3.477A5.37,5.37,0,0,1,3.767,9,5.442,5.442,0,0,1,12.6,4.868L15.279,2.25A9.29,9.29,0,0,0,9.209,0,9.08,9.08,0,0,0,0,9a9.08,9.08,0,0,0,9.209,9A8.586,8.586,0,0,0,18,9,7.306,7.306,0,0,0,17.791,7.364Z"
+                    fill="none"
+                  />
+                  <g clip-path="url(#clip-path)">
+                    <path
+                      d="M14.651,15.136,1.674,5.318,0,4.091,14.651,0Z"
+                      transform="translate(4.605 3.682)"
+                      fill="#4285f4"
+                    />
+                  </g>
+                </g>
+              </g>
+            </svg> </span
+          >Sign Up with Google
+        </button>
+        <button (click)="setAuthMethod('facebook')" class="btn auth-button">
+          <span
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              x="0px"
+              y="0px"
+              viewBox="0 0 291.319 291.319"
+              style="enable-background: new 0 0 291.319 291.319"
+              xml:space="preserve"
+            >
+              <g>
+                <path
+                  style="fill: #3b5998"
+                  d="M145.659,0c80.45,0,145.66,65.219,145.66,145.66c0,80.45-65.21,145.659-145.66,145.659
+		S0,226.109,0,145.66C0,65.219,65.21,0,145.659,0z"
+                />
+                <path
+                  style="fill: #ffffff"
+                  d="M163.394,100.277h18.772v-27.73h-22.067v0.1c-26.738,0.947-32.218,15.977-32.701,31.763h-0.055
+		v13.847h-18.207v27.156h18.207v72.793h27.439v-72.793h22.477l4.342-27.156h-26.81v-8.366
+		C154.791,104.556,158.341,100.277,163.394,100.277z"
+                />
+              </g></svg></span
+          >Sign Up with Facebook
+        </button>
+        <button (click)="setAuthMethod('apple')" class="btn auth-button">
+          <span
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              x="0px"
+              y="0px"
+              viewBox="0 0 305 305"
+              style="enable-background: new 0 0 305 305"
+              xml:space="preserve"
+            >
+              <g>
+                <path
+                  d="M40.738,112.119c-25.785,44.745-9.393,112.648,19.121,153.82C74.092,286.523,88.502,305,108.239,305
+		c0.372,0,0.745-0.007,1.127-0.022c9.273-0.37,15.974-3.225,22.453-5.984c7.274-3.1,14.797-6.305,26.597-6.305
+		c11.226,0,18.39,3.101,25.318,6.099c6.828,2.954,13.861,6.01,24.253,5.815c22.232-0.414,35.882-20.352,47.925-37.941
+		c12.567-18.365,18.871-36.196,20.998-43.01l0.086-0.271c0.405-1.211-0.167-2.533-1.328-3.066c-0.032-0.015-0.15-0.064-0.183-0.078
+		c-3.915-1.601-38.257-16.836-38.618-58.36c-0.335-33.736,25.763-51.601,30.997-54.839l0.244-0.152
+		c0.567-0.365,0.962-0.944,1.096-1.606c0.134-0.661-0.006-1.349-0.386-1.905c-18.014-26.362-45.624-30.335-56.74-30.813
+		c-1.613-0.161-3.278-0.242-4.95-0.242c-13.056,0-25.563,4.931-35.611,8.893c-6.936,2.735-12.927,5.097-17.059,5.097
+		c-4.643,0-10.668-2.391-17.645-5.159c-9.33-3.703-19.905-7.899-31.1-7.899c-0.267,0-0.53,0.003-0.789,0.008
+		C78.894,73.643,54.298,88.535,40.738,112.119z"
+                />
+                <path
+                  id="XMLID_230_"
+                  d="M212.101,0.002c-15.763,0.642-34.672,10.345-45.974,23.583c-9.605,11.127-18.988,29.679-16.516,48.379
+		c0.155,1.17,1.107,2.073,2.284,2.164c1.064,0.083,2.15,0.125,3.232,0.126c15.413,0,32.04-8.527,43.395-22.257
+		c11.951-14.498,17.994-33.104,16.166-49.77C214.544,0.921,213.395-0.049,212.101,0.002z"
+                />
+              </g></svg></span
+          >Sign Up with Apple
+        </button>
+        <button (click)="setAuthMethod('twitter')" class="btn auth-button">
+          <span
+            ><svg
+              version="1.1"
+              id="Capa_1"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              x="0px"
+              y="0px"
+              viewBox="0 0 112.197 112.197"
+              style="enable-background: new 0 0 112.197 112.197"
+              xml:space="preserve"
+            >
+              <g>
+                <circle
+                  style="fill: #55acee"
+                  cx="56.099"
+                  cy="56.098"
+                  r="56.098"
+                />
+                <g>
+                  <path
+                    style="fill: #f1f2f2"
+                    d="M90.461,40.316c-2.404,1.066-4.99,1.787-7.702,2.109c2.769-1.659,4.894-4.284,5.897-7.417
+			c-2.591,1.537-5.462,2.652-8.515,3.253c-2.446-2.605-5.931-4.233-9.79-4.233c-7.404,0-13.409,6.005-13.409,13.409
+			c0,1.051,0.119,2.074,0.349,3.056c-11.144-0.559-21.025-5.897-27.639-14.012c-1.154,1.98-1.816,4.285-1.816,6.742
+			c0,4.651,2.369,8.757,5.965,11.161c-2.197-0.069-4.266-0.672-6.073-1.679c-0.001,0.057-0.001,0.114-0.001,0.17
+			c0,6.497,4.624,11.916,10.757,13.147c-1.124,0.308-2.311,0.471-3.532,0.471c-0.866,0-1.705-0.083-2.523-0.239
+			c1.706,5.326,6.657,9.203,12.526,9.312c-4.59,3.597-10.371,5.74-16.655,5.74c-1.08,0-2.15-0.063-3.197-0.188
+			c5.931,3.806,12.981,6.025,20.553,6.025c24.664,0,38.152-20.432,38.152-38.153c0-0.581-0.013-1.16-0.039-1.734
+			C86.391,45.366,88.664,43.005,90.461,40.316L90.461,40.316z"
+                  />
+                </g>
+              </g></svg></span
+          >Sign Up with Twitter
+        </button>
+        <button (click)="setAuthMethod('email')" class="btn auth-button">
+          <span
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              viewBox="0 0 64 64"
+              enable-background="new 0 0 64 64"
+              xml:space="preserve"
+            >
+              <g>
+                <path
+                  d="M58.0034485,8H5.9965506c-3.3136795,0-5.9999995,2.6862001-5.9999995,6v36c0,3.3137016,2.6863203,6,5.9999995,6
+	h52.006897c3.3137016,0,6-2.6862984,6-6V14C64.0034485,10.6862001,61.3171501,8,58.0034485,8z M62.0034485,49.1108017
+	L43.084549,30.1919994l18.9188995-12.0555992V49.1108017z M5.9965506,10h52.006897c2.2056007,0,4,1.7943001,4,4v1.7664003
+	L34.4677505,33.3134003c-1.4902,0.9492989-3.3935013,0.9199982-4.8495998-0.0703011L1.9965508,14.4694996V14
+	C1.9965508,11.7943001,3.7910507,10,5.9965506,10z M1.9965508,16.8852005L21.182251,29.9251003L1.9965508,49.1108017V16.8852005z
+	 M58.0034485,54H5.9965506c-1.6473999,0-3.0638998-1.0021019-3.6760998-2.4278984l20.5199013-20.5200024l5.6547985,3.843401
+	c1.0859013,0.7383003,2.3418007,1.1083984,3.5995998,1.1083984c1.1953011,0,2.3925018-0.3339996,3.4463005-1.0048981
+	l5.8423996-3.7230015l20.2961006,20.2961025C61.0673485,52.9978981,59.6508713,54,58.0034485,54z"
+                />
+              </g>
+            </svg>
+          </span>
+          Sign Up with Email
+        </button>
+      </div>
+      <div *ngIf="authMethod === 'email'" class="email-auth-dialogue">
+        <div class="form-row">
+          <div class="name-group col-sm-auto">
+            <label for="firstname">First Name: </label>
+            <input
+              type="text"
+              name="firstname"
+              [(ngModel)]="auth.firstname"
+              class="form-control"
+              required
+            />
+          </div>
+          <div class="name-group col-sm-auto">
+            <label for="lastname">Last Name: </label>
+            <input
+              type="text"
+              required
+              name="lastname"
+              class="form-control"
+              [(ngModel)]="auth.lastname"
+            />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="email">Email: </label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            class="form-control"
+            required
+            [(ngModel)]="auth.email"
+          />
+        </div>
+        <div class="form-group">
+          <label for="mobile">Mobile: </label>
+          <input
+            type="tel"
+            name="mobile"
+            id="mobile"
+            [(ngModel)]="auth.mobile"
+            class="form-control"
+          />
+        </div>
+        <div class="form-group">
+          <label for="password">Password: </label>
+          <input
+            type="password"
+            name="password"
+            id="password"
+            required
+            [(ngModel)]="auth.password"
+            class="form-control"
+          />
+        </div>
+        <div class="form-group">
+          <label for="cPassword">Confirm Password: </label>
+          <input
+            type="password"
+            name="cPassword"
+            id="cPassword"
+            required
+            [(ngModel)]="auth.cPassword"
+            class="form-control"
+          />
+        </div>
+        <div class="form-buttons form-group">
+          <button class="btn bg-primary" type="submit">Sign Up</button>
+        </div>
+      </div>
+    </form>
+    <div class="auth-footer">
+      <p>Already have a Account? <b [routerLink]="['/user/login']">Login</b></p>
+    </div>
+  </div>
+</section>
