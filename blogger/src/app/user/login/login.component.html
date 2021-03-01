@@ -10,7 +10,11 @@
       class="container-fluid"
     >
       <div *ngIf="!authInitiated" class="form-group auth-buttons">
-        <button (click)="setAuthMethod('google')" class="btn auth-button">
+        <button
+          (click)="setAuthMethod('google')"
+          type="submit"
+          class="btn auth-button"
+        >
           <span>
             <svg
               viewBox="0 0 24 24"
@@ -115,7 +119,11 @@
             </svg> </span
           >Log In with Google
         </button>
-        <button (click)="setAuthMethod('facebook')" class="btn auth-button">
+        <button
+          (click)="setAuthMethod('facebook')"
+          class="btn auth-button"
+          type="submit"
+        >
           <span
             ><svg
               version="1.1"
@@ -143,7 +151,11 @@
               </g></svg></span
           >Log In with Facebook
         </button>
-        <button (click)="setAuthMethod('apple')" class="btn auth-button">
+        <button
+          (click)="setAuthMethod('apple')"
+          class="btn auth-button"
+          type="submit"
+        >
           <span
             ><svg
               version="1.1"
@@ -178,7 +190,11 @@
               </g></svg></span
           >Log In with Apple
         </button>
-        <button (click)="setAuthMethod('twitter')" class="btn auth-button">
+        <button
+          (click)="setAuthMethod('twitter')"
+          class="btn auth-button"
+          type="submit"
+        >
           <span
             ><svg
               version="1.1"
@@ -214,7 +230,11 @@
               </g></svg></span
           >Log In with Twitter
         </button>
-        <button (click)="setAuthMethod('email')" class="btn auth-button">
+        <button
+          (click)="setAuthMethod('email')"
+          class="btn auth-button"
+          type="submit"
+        >
           <span
             ><svg
               xmlns="http://www.w3.org/2000/svg"
@@ -264,7 +284,9 @@
           />
         </div>
         <div class="form-buttons form-group">
-          <button class="btn bg-primary" type="submit">Login</button>
+          <button class="btn bg-primary" type="submit" (click)="x()">
+            Login
+          </button>
         </div>
       </div>
     </form>

@@ -9,6 +9,7 @@ import { StatsComponent } from './site/stats/stats.component';
 import { MediaComponent } from './site/media/media.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { OfflineComponent } from './offline/offline.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,7 @@ import { OfflineComponent } from './offline/offline.component';
     PageNotFoundComponent,
     OfflineComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule],
+  imports: [BrowserModule, HttpClientModule, AppRoutingModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })
